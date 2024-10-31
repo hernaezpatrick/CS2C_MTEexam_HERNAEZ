@@ -6,7 +6,7 @@ const age = 19;
 const favoriteNumber = 21;
 const favoriteColor ="Green";
 
-//Creating an objectto store the user information
+//Creating an object to store the user information
 let userInfo = {
 fullName: fullName,
 age: age,
