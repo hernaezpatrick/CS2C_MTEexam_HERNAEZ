@@ -1,0 +1,12 @@
+// File: userProfile.js
+
+// Create the userProfile object
+let userProfile = {
+    fullName: "Patrick Hernaez",
+    age: 27,
+    favoriteNumber: 7,
+    favoriteColors: ["blue", "green", "red"]
+};
+
+// Log the entire userProfile object to the console
+console.log("User Profile:", userProfile);
