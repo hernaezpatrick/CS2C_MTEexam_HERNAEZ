@@ -1,0 +1,27 @@
+// File: userAgeCategorization.js
+
+// Collecting user's age
+let userAge = 21; // Example age; this could be dynamically collected as well
+
+// Age categorization using nested if-else
+if (userAge < 5) {
+    console.log("The user is categorized as a Toddler.");
+} else {
+    if (userAge <= 12) {
+        console.log("The user is categorized as a Child.");
+    } else {
+        if (userAge <= 19) {
+            console.log("The user is categorized as a Teenager.");
+        } else {
+            if (userAge <= 35) {
+                console.log("The user is categorized as a Young Adult.");
+            } else {
+                if (userAge <= 60) {
+                    console.log("The user is categorized as Middle-Aged.");
+                } else {
+                    console.log("The user is categorized as a Senior.");
+                }
+            }
+        }
+    }
+}
