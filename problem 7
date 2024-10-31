@@ -1,0 +1,16 @@
+7-8. Coding Problem 7-8: Student Enrollment:
+• Create three (3) arrays, namely DSA, PL, Networks
+• (Subjects) The program must ask the user to select the subject of choice to enroll a student (A) DSA,
+(B) PL, (C) Networks
+• (Operations) The user then must select an option between (A) Enroll, (B) Unenroll, (C) Select
+Another Subject, (D) Exit)
+• (Enroll) Once selected, the program must ask the name of the student to enroll in the subject
+• Use the push) to add the name of the student at the end of the array of the subject
+Then the program must be routed back to (Operations).
+(Unenroll) Once selected, the program must:
+• List the name of currently enrolled students in the subject, then
+• Ask the name of the student to enroll in the subject
+• Use the pop()/unshift)/slice) to remove the name of the student in the array of the subject.
+• (Select Another Subject) Once selected, the program must:
+Return to Subjects
+• (Exit) Once selected, the program must print out all the enlisted students per subject array, and exits the program from execution.
