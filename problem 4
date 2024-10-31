@@ -1,0 +1,23 @@
+// File: favoriteNumberGuess.js
+
+// Declare the favorite number
+const theFavNumber = 7; // Set the favorite number to be guessed
+
+let guess = null;
+
+// Using a while loop to keep prompting until the user guesses correctly
+while (guess !== theFavNumber) {
+    // Prompt user to guess the favorite number and convert the input to a number
+    guess = parseInt(prompt("Guess the favorite number:"), 10);
+
+    // Check if the guess is too high, too low, or correct
+    if (guess > theFavNumber) {
+        console.log("Your guess is too high.");
+    } else if (guess < theFavNumber) {
+        console.log("Your guess is too low.");
+    } else if (guess === theFavNumber) {
+        console.log("Congratulations! Your guess is correct.");
+    } else {
+        console.log("Please enter a valid number.");
+    }
+}
