@@ -1,0 +1,86 @@
+// File: studentEnrollment.js
+
+// Arrays for subjects
+let DSA = [];
+let PL = [];
+let Networks = [];
+
+let subjectChoice;
+let operationChoice;
+let subjectArray;
+let studentName;
+
+function enrollStudent(subjectArray) {
+    studentName = prompt("Enter the name of the student to enroll:");
+    subjectArray.push(studentName);
+    console.log(`${studentName} has been enrolled.`);
+}
+
+function unenrollStudent(subjectArray) {
+    if (subjectArray.length === 0) {
+        console.log("No students enrolled in this subject.");
+        return;
+    }
+
+    console.log("Currently enrolled students:", subjectArray);
+    studentName = prompt("Enter the name of the student to unenroll:");
+
+    const index = subjectArray.indexOf(studentName);
+    if (index !== -1) {
+        subjectArray.splice(index, 1);
+        console.log(`${studentName} has been unenrolled.`);
+    } else {
+        console.log("Student not found in the list.");
+    }
+}
+
+function selectSubject() {
+    subjectChoice = prompt("Select a subject: (A) DSA, (B) PL, (C) Networks").toUpperCase();
+    switch (subjectChoice) {
+        case "A":
+            subjectArray = DSA;
+            break;
+        case "B":
+            subjectArray = PL;
+            break;
+        case "C":
+            subjectArray = Networks;
+            break;
+        default:
+            console.log("Invalid subject selection. Returning to main menu.");
+            subjectArray = null;
+    }
+}
+
+while (true) {
+    // Subject selection
+    selectSubject();
+    if (!subjectArray) continue;
+
+    while (true) {
+        // Operation selection
+        operationChoice = prompt("Select an option: (A) Enroll, (B) Unenroll, (C) Select Another Subject, (D) Exit").toUpperCase();
+
+        if (operationChoice === "A") {
+            enrollStudent(subjectArray);
+        } else if (operationChoice === "B") {
+            unenrollStudent(subjectArray);
+        } else if (operationChoice === "C") {
+            break; // Exit to select another subject
+        } else if (operationChoice === "D") {
+            console.log("Final list of enrolled students per subject:");
+            console.log("DSA:", DSA);
+            console.log("PL:", PL);
+            console.log("Networks:", Networks);
+            console.log("Exiting the program.");
+            exit();
+        } else {
+            console.log("Invalid option. Please select again.");
+        }
+    }
+}
+
+function exit() {
+    console.log("Exiting the program.");
+    process.exit();
+}
